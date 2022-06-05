@@ -19,3 +19,24 @@ public:
         
     }
 };
+************************************************************************************************************************
+//Another Approach if you want to INPUT FROM USER AND FIND OUTPUT 
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int n,sum=0,product=1,digit,result;
+   cout<<"Enter a number"<<endl;
+   cin>>n;
+   while(n>0){
+       digit = n % 10;
+       product = product*digit;
+       sum = sum+digit;
+       n = n /10;
+   }
+   result = product - sum;
+   cout<<"The Result is "<<result;
+    return 0;
+}
